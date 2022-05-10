@@ -30,3 +30,17 @@ Type of uses :
 - `upd` - Use when want to improve some function.
 - `del` - Use when some function or feature is deleted.
 - `upl` - Use when some file is uploaded to Git except coding.
+
+### Run Project
+* Backend
+```
+cd backend
+yarn install
+node index.js
+```
+* Frontend
+```
+cd frontend
+yarn install
+yarn serve
+```
