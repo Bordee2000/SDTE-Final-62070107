@@ -8,24 +8,46 @@
       <v-img
         src="https://vaccineforthais.ais.th/Images/MicrosoftTeams-image.png"
       ></v-img>
-      <div class="mx-auto mt-6">
+      <div class="mx-auto mt-10">
         <h4 class="mb-1">บริการลงทะเบียนรับวัคซีนโควิด-19 โดย เอไอเอส</h4>
         <h4 class="mb-2 font-weight-light">
           จัดสรรโดย กรมการแพทย์ กระทรวงสาธารณสุข และกระทรวงคมนาคม
         </h4>
-        <h4 class="mb-1">บริการลงทะเบียนรับวัคซีนโควิด-19 โดย เอไอเอส</h4>
-        <p class="mb-1 text-caption">เพื่อล็อกอินลงทะเบียนรับวัคซีน</p>
-        <v-row class="mt-5">
-          <v-text-field
-            class="mr-5"
-            dense
-            solo
-            placeholder="0XX-XXX-XXXX"
-          ></v-text-field>
-          <v-btn color="#8DC63F" style="color: white"
-            >รับรหัส OTP ทาง SMS</v-btn
-          >
-        </v-row>
+
+        <div>
+          <h4 class="mb-1">บริการลงทะเบียนรับวัคซีนโควิด-19 โดย เอไอเอส</h4>
+          <p class="mb-1 text-caption">เพื่อล็อกอินลงทะเบียนรับวัคซีน</p>
+          <v-row class="mt-5">
+            <v-text-field
+              class="mr-5"
+              dense
+              solo
+              placeholder="0XX-XXX-XXXX"
+              data-val-regex-pattern="^\(?([0-9]{3})\)?[-. ]?([0-9]{3})[-. ]?([0-9]{4})$"
+            ></v-text-field>
+            <v-btn
+              color="#8DC63F"
+              style="color: white"
+              @click="modalStatus = true"
+              >รับรหัส OTP ทาง SMS</v-btn
+            >
+          </v-row>
+        </div>
+
+        <div v-if="modalStatus == true">
+          <h4 class="mb-1">ระบุรหัส OTP ที่ได้รับทาง SMS</h4>
+          <p class="mb-1 text-caption">(รหัสผ่านมีอายุการใช้งาน 5 นาที)</p>
+          <v-row class="mt-5">
+            <v-text-field
+              class="mr-5"
+              dense
+              solo
+              placeholder="XXXX"
+            ></v-text-field>
+            <v-btn color="#8DC63F" style="color: white">เข้าสู่ระบบ</v-btn>
+          </v-row>
+        </div>
+
         <h4 class="mb-1" style="color: #74a822">
           ข้อควรรู้ก่อนลงทะเบียนรับวัคซีน
         </h4>
@@ -47,10 +69,22 @@
           </li>
         </ul>
 
-        <v-btn class="mx-auto mt-8 " color="#5c8e26" style="color: white"
-          >ดูคำถามที่พบบ่อย</v-btn
-        >
+        <div class="d-flex justify-center my-8">
+          <v-btn class="mx-auto" color="#5c8e26" style="color: white"
+            >ดูคำถามที่พบบ่อย</v-btn
+          >
+        </div>
       </div>
     </v-col>
   </v-container>
 </template>
+
+<script>
+export default {
+  data() {
+    return {
+      modalStatus: false,
+    };
+  },
+};
+</script>

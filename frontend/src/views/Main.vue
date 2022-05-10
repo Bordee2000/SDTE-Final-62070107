@@ -14,7 +14,7 @@
       src="https://www.ais.th/vaccinesforthais/images/vaccine28-04-2022.png"
       max-width="900"
     ></v-img>
-    <v-btn rounded color="#B2D235" href="/login" class="text-capitalize hover-darker pa-6 text-h5 mt-6"
+    <v-btn rounded color="#B2D235" href="/login" class="text-capitalize hover-darker pa-6 text-h5 my-8"
       >ลงทะเบียนจอคิว - Register</v-btn
     >
   </v-container>
