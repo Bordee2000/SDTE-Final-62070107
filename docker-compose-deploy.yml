@@ -1,0 +1,7 @@
+version: "3.8"
+
+services:
+  frontend:
+    image: bordee2000/sdte-62070107-frontend:1.0.0
+    ports:
+      - "80:8080"
