@@ -1,6 +1,5 @@
 # SDTE Final
 
-## Github
 ### Branch
 * `Main` - When dev features that ready to be deployed on the production.
 * `dev` - A develop branch for merging each feature branch.
